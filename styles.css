@@ -1,0 +1,179 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Arial', sans-serif;
+background: hsl(271, 100%, 52%);
+color: white;
+
+}
+
+header, footer {
+background: #2f158d;
+padding: 20px;
+text-align: center;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+transition: 0.3s;
+}
+
+nav a:hover {
+color: #ffccbc;
+}
+
+main {
+padding: 20px;
+text-align: center;
+}
+
+.inicio, .presentacion, .contacto {
+padding: 20px;
+animation: aparecer 1.5s ease;
+}
+
+form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+max-width: 400px;
+margin: 0 auto;
+}
+
+input, textarea, button {
+padding: 10px;
+border: none;
+border-radius: 5px;
+}
+
+button {
+background: #1976d2;
+color: white;
+cursor: pointer;
+transition: 0.3s;
+}
+
+button:hover {
+background: #1565c0;
+}
+
+.portafolio-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(1000px, 1fr));
+gap: 10px;
+padding: 20px;
+}
+
+.card {
+background: #1e1e1e;
+padding: 20px;
+border-radius: 10px;
+transition: transform 0.3s;
+}
+
+.card:hover {
+background: #333;
+transform: scale(1.05);
+}
+
+@keyframes aparecer {
+from {
+opacity: 0;
+transform: translateY(-20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@media (max-width: 768px) {
+nav ul {
+flex-direction: column;
+}
+}
+
+@media (max-width: 480px) {
+.portafolio-grid {
+grid-template-columns: 1fr;
+}
+}
+
+body {
+animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+
+.card {
+background: rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.portafolio-grid .card {
+animation: aparecer 1s ease forwards;
+opacity: 0;
+}
+
+.portafolio-grid .card:nth-child(1) { animation-delay: 0.2s; }
+.portafolio-grid .card:nth-child(2) { animation-delay: 0.4s; }
+.portafolio-grid .card:nth-child(3) { animation-delay: 0.6s; }
+
+body {
+background: linear-gradient(-45deg, #060492, #773ca7, #460a61, #121212);
+background-size: 400% 400%;
+animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+.typing {
+overflow: hidden;
+border-right: .15em solid #fff;
+white-space: nowrap;
+animation:
+typing 3s steps(30, end),
+blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: #ff0000; }
+}
+
+body {
+font-family: 'Tangerine', serif;
+font-size: 30px;
+text-shadow: 4px 4px 4px #aaa;
+}
+
+.alinear-texto {
+text-align: center;
+}
+
+
